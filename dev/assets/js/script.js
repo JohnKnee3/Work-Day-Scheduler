@@ -35,3 +35,4 @@
 //5.1.5 Intorduced a ton of Jquery ideas.  More just broadstrokes.
 //5.1.6 Lots of stuff using $(this)
 //5.1.7 attr("attributeName, value") as opposed to 5.1.6 just using attr(attributeName)
+//5.2.4 Bootstrap Row/Col/Media size scaling.
