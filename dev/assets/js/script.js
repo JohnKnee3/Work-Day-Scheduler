@@ -33,3 +33,4 @@
 // Implement custom fonts and icons via CDNs
 
 //5.1.5 Intorduced a ton of Jquery ideas.  More just broadstrokes.
+//5.1.6 Lots of stuff using $(this)
