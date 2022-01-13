@@ -39,3 +39,4 @@
 //5.2.5 Bootstrap focusing on card, modal and form style.
 //5.2.6 Bootstrap for Sticky Top, mt-auto, d-flex, flex-column and d-none.
 //5.3.4 Added JQueryUI links to the top and bottom of the page.
+//5.3.5 Exlored the .sortable and how to save things to the array.  Pretty dense stuff here.
