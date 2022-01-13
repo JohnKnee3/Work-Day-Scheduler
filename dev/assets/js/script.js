@@ -44,3 +44,4 @@
 //5.3.7 Jquery-ui-touch-punch makes your exsisting Jquery code work on phones
 //5.4.4 Added datepicker widget and cleaned up some issues when we changed a "blur" to a "change"
 //5.4.5 Added the link to moment.js and got a general overview
+//5.4.6 Used moment.js to create a function that converts the date to a date/time it reads and checks it against the current date/time and applies a class to the <li> to show past due or near due.
