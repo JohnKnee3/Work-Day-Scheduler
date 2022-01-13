@@ -41,3 +41,4 @@
 //5.3.4 Added JQueryUI links to the top and bottom of the page.
 //5.3.5 Exlored the .sortable and how to save things to the array.  Pretty dense stuff here.
 //5.3.6 Focuses on dropable and in this case removing a targeted draggable item being dragged.
+//5.3.7 Jquery-ui-touch-punch makes your exsisting Jquery code work on phones
