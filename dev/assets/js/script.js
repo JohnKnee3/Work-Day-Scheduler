@@ -37,4 +37,5 @@
 //5.1.7 attr("attributeName, value") as opposed to 5.1.6 just using attr(attributeName)
 //5.2.4 Bootstrap Row/Col/Media size scaling.
 //5.2.5 Bootstrap focusing on card, modal and form style.
-//5.26 Bootstrap for Sticky Top, mt-auto, d-flex, flex-column and d-none.
+//5.2.6 Bootstrap for Sticky Top, mt-auto, d-flex, flex-column and d-none.
+//5.3.4 Added JQueryUI links to the top and bottom of the page.
