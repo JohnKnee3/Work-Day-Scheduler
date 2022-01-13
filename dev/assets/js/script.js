@@ -47,3 +47,4 @@
 //5.4.6 Used moment.js to create a function that converts the date to a date/time it reads and checks it against the current date/time and applies a class to the <li> to show past due or near due.
 //5.5.4 Used set interval to call the previously created function once overy 30 minutes
 //5.5.5 Got some fonts from google that was then linked into our HTML at the top before out style.css
+//5.5.6 Started using iconic to add icons to the doc.  Link goes above our CSS.
