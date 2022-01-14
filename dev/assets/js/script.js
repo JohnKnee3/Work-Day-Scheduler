@@ -48,3 +48,4 @@
 //5.5.4 Used set interval to call the previously created function once overy 30 minutes
 //5.5.5 Got some fonts from google that was then linked into our HTML at the top before out style.css
 //5.5.6 Started using iconic to add icons to the doc.  Link goes above our CSS.
+//5.5.7  called it 5.5.8 byt mistake in the taskmaster.  Tons of CSS styles and used html, css and js to make it work.  
