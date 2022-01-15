@@ -1,22 +1,51 @@
-$(".time-block").on("click", ".description", function () {
-    var text = $(this).text().trim();
-    console.log(text);
+//variable I want to save into tasks
+var tasks = [];
+
+//saves the task variable to the local storage
+var saveTasks = function () {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+};
+
+//gets items from local storage
+var loadTasks = function () {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+    console.log(tasks);
+
+    if (!tasks) {
+        tasks = [];
+    }
+};
+
+
+//when I click a description box I can then modify the text area
+$(".time-block").on("focus", ".description", function () {
+    $(this).text().trim();
 });
 
-// $(".time-block").on("click", ".saveBtn", function () {
-//     var text = $(this).val().trim();
+//when clicked away or on the save button it saves the new value
+$(".time-block").on("blur", ".description", function () {
+    var taskTime = $(this).attr("id").trim();
+    console.log(taskTime);
 
-//     var taskText = $("<div>")
-//     .addClass("description")
-//     .text(text);
+    var taskText = $(this).val();
+    console.log(taskText);
+    //and pushes it into the array
+    tasks.push({
+        time: taskTime,
+        text: taskText
+    });
+    //and saves it    
+    saveTasks();
+});
 
-//     $(this).replaceWith(taskText);
-// });
+
+//checks the local storage
+loadTasks();
 
 
-// Implement third-party libraries such as Bootstrap, jQuery, and Moment.js
+// Implement third-party libraries such as Bootstrap, jQuery, and Moment.js---
 
-// Perform DOM traversals and manipulations with jQuery
+// Perform DOM traversals and manipulations with jQuery---
 
 // Use jQuery to save user input in local storage
 
@@ -64,4 +93,4 @@ $(".time-block").on("click", ".description", function () {
 //5.5.4 Used set interval to call the previously created function once overy 30 minutes
 //5.5.5 Got some fonts from google that was then linked into our HTML at the top before out style.css
 //5.5.6 Started using iconic to add icons to the doc.  Link goes above our CSS.
-//5.5.7  called it 5.5.8 byt mistake in the taskmaster.  Tons of CSS styles and used html, css and js to make it work.  
+//5.5.7  called it 5.5.8 byt mistake in the taskmaster.  Tons of CSS styles and used html, css and js to make it work.
