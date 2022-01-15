@@ -1,3 +1,19 @@
+$(".time-block").on("click", ".description", function () {
+    var text = $(this).text().trim();
+    console.log(text);
+});
+
+// $(".time-block").on("click", ".saveBtn", function () {
+//     var text = $(this).val().trim();
+
+//     var taskText = $("<div>")
+//     .addClass("description")
+//     .text(text);
+
+//     $(this).replaceWith(taskText);
+// });
+
+
 // Implement third-party libraries such as Bootstrap, jQuery, and Moment.js
 
 // Perform DOM traversals and manipulations with jQuery
