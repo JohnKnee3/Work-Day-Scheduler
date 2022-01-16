@@ -48,6 +48,23 @@ $(".time-block").on("blur", ".description", function () {
     saveTasks();
 });
 
+//assigns colors to the times if the are in the past, present or future
+var auditTask = function() {
+    
+    var time = moment();
+    console.log(time);
+
+    // if(moment().isBefore(time)) {
+    //     $(".description").addClass("past");
+    // }
+    // else if(moment().isSame(time)) {
+    //     $(".description").addClass("present");
+    // }
+    // else if(moment().isAfter(time)){
+    //     $(".description").addClass("future");
+    // }
+};
+
 //curent day display with moment
 var dayDisplay = document.querySelector("#currentDay");
 var currentDay = moment();
@@ -55,6 +72,9 @@ dayDisplay.textContent = currentDay.format("MMM DD, YYYY");
 
 //call the func that checks the local storage
 loadTasks();
+
+//calls the func to assign colors 
+auditTask();
 
 
 // Implement third-party libraries such as Bootstrap, jQuery, and Moment.js---
