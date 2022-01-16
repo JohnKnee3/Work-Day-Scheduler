@@ -1,7 +1,7 @@
 //variable I want to save into tasks
 var tasks = [];
 
-//saves the task variable to the local storage
+//saves the tasks variable to the local storage
 var saveTasks = function () {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 };
@@ -14,8 +14,23 @@ var loadTasks = function () {
     if (!tasks) {
         tasks = [];
     }
+
+    //loop over object properties
+    $.each(tasks, function(list, arr) {
+        console.log(list + ": " + arr);
+    
+        // updateTask(tasks.text, tasks.time);
+        updateTask();
+    });  
 };
 
+//creates tasks when loaded from local storage and applies them to the HTML
+var updateTask = function(){
+    var fakeId = "#9am";
+    var sampleText= "Does this jquery var work?";
+    $(fakeId).val(sampleText);
+
+};
 
 //when I click a description box I can then modify the text area
 $(".time-block").on("focus", ".description", function () {
