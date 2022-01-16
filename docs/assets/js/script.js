@@ -15,21 +15,16 @@ var loadTasks = function () {
         tasks = [];
     }
 
-    //loop over object properties
+    //loop over object properties and sends then to updateTask
     $.each(tasks, function(list, arr) {
-        console.log(list + ": " + arr);
-    
-        // updateTask(tasks.text, tasks.time);
-        updateTask();
+        updateTask(arr.time, arr.text);
     });  
 };
 
-//creates tasks when loaded from local storage and applies them to the HTML
-var updateTask = function(){
-    var fakeId = "#9am";
-    var sampleText= "Does this jquery var work?";
-    $(fakeId).val(sampleText);
-
+//updates tasks when loaded from local storage and applies them to the HTML
+var updateTask = function(arrTime, arrText){
+    var findId = "#" + arrTime;
+    $(findId).val(arrText);
 };
 
 //when I click a description box I can then modify the text area
@@ -54,7 +49,7 @@ $(".time-block").on("blur", ".description", function () {
 });
 
 
-//checks the local storage
+//call the func that checks the local storage
 loadTasks();
 
 
@@ -62,9 +57,9 @@ loadTasks();
 
 // Perform DOM traversals and manipulations with jQuery---
 
-// Use jQuery to save user input in local storage
+// Use jQuery to save user input in local storage---
 
-// Work with the Bootstrap grid layout in HTML
+// Work with the Bootstrap grid layout in HTML---
 
 // Work with Bootstrap components
 
