@@ -10,7 +10,7 @@ var saveTasks = function () {
 var loadTasks = function () {
     tasks = JSON.parse(localStorage.getItem("tasks"));
     console.log(tasks);
-
+//local storage is empty this creates an empty array
     if (!tasks) {
         tasks = [];
     }
