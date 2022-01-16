@@ -48,6 +48,10 @@ $(".time-block").on("blur", ".description", function () {
     saveTasks();
 });
 
+//curent day display with moment
+var dayDisplay = document.querySelector("#currentDay");
+var currentDay = moment();
+dayDisplay.textContent = currentDay.format("MMM DD, YYYY");
 
 //call the func that checks the local storage
 loadTasks();
