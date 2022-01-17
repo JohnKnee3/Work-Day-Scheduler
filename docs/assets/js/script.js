@@ -9,20 +9,20 @@ var saveTasks = function () {
 //gets items from local storage
 var loadTasks = function () {
     tasks = JSON.parse(localStorage.getItem("tasks"));
-    
-//local storage is empty this creates an empty array
+
+    //local storage is empty this creates an empty array
     if (!tasks) {
         tasks = [];
     }
 
     //loop over object properties and sends then to updateTask
-    $.each(tasks, function(list, arr) {
+    $.each(tasks, function (list, arr) {
         updateTask(arr.time, arr.text);
-    });  
+    });
 };
 
 //updates tasks when loaded from local storage and applies them to the HTML
-var updateTask = function(arrTime, arrText){
+var updateTask = function (arrTime, arrText) {
     var findId = "#" + arrTime;
     $(findId).val(arrText);
 };
@@ -49,31 +49,27 @@ $(".time-block").on("blur", ".description", function () {
 });
 
 //assigns colors to the times if the are in the past, present or future
+var auditTask = function () {
+    $(".description").each(function () {
+        var hour = $(this).attr("id")
 
-var auditTask = function() {
-    var test = $("textarea").each(function() {
-        //var hour = $(this).attr(id)
-        console.log(test);
+        var time = moment().hour(hour);
+        
+
+        if (moment().isBefore(time)) {
+            $(this).addClass("future");
+        }
+        else if (moment().isSame(time)) {
+            $(this).addClass("present");
+        }
+        else if (moment().isAfter(time)) {
+            $(this).addClass("past");
+        }
     });
-    
-    //line 60 will be replaced with line 55 and all will be placed in the for loop
-    var hour = "11"; 
-    var time = moment().hour(hour);
-    console.log(time);
-
-//     var time = moment();
-//     console.log(time);
-
-//     if(moment().isBefore(time)) {
-//         $(".description").addClass("past");
-//     }
-//     else if(moment().isSame(time)) {
-//         $(".description").addClass("present");
-//     }
-//     else if(moment().isAfter(time)){
-//         $(".description").addClass("future");
-//     }
 };
+
+
+
 
 //curent day display with moment
 var dayDisplay = document.querySelector("#currentDay");
@@ -86,6 +82,12 @@ loadTasks();
 //calls the func to assign colors 
 auditTask();
 
+// audit task time every 30 seconds
+setInterval(function () {
+    console.log("auditTask test");
+    auditTask();
+}, 30000);
+
 
 // Implement third-party libraries such as Bootstrap, jQuery, and Moment.js---
 
@@ -95,11 +97,11 @@ auditTask();
 
 // Work with the Bootstrap grid layout in HTML---
 
-// Work with Bootstrap components
+// Work with Bootstrap components---
 
-// Add custom color styles to an existing CSS framework
+// Add custom color styles to an existing CSS framework---
 
-// Work with custom fonts and icons via a content delivery network (CDN)
+// Work with custom fonts and icons via a content delivery network (CDN)---
 
 
 
