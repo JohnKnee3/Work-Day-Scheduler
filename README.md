@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my fifth challenge for the UofU bootcamp.  In it you will find a schudluler that you can input text into it by clicking on box to help plan your day.  It will save your responses so even if you refresh your text will stay.  The current hour will be highlighted in red with future hours being highlighted green and hours that have past being grey.   
+This is my fifth challenge for the UofU bootcamp.  In it you will find a scheduler that you can input text into it by clicking on box to help plan your day.  It will save your responses so even if you refresh your text will stay.  The current hour will be highlighted in red with future hours being highlighted green and hours that have past being grey.   
 
 ## What I Learned
 
