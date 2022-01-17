@@ -54,7 +54,7 @@ var auditTask = function () {
         var hour = $(this).attr("id")
 
         var time = moment().hour(hour);
-        
+
 
         if (moment().isBefore(time)) {
             $(this).addClass("future");
@@ -83,11 +83,10 @@ loadTasks();
 auditTask();
 
 // audit task time every 30 seconds
-setInterval(function () {
-    console.log("auditTask test");
-    auditTask();
-}, 30000);
+setInterval('auditTask()',30000);
 
+
+//NOTES------------------------------------------------------
 
 // Implement third-party libraries such as Bootstrap, jQuery, and Moment.js---
 
