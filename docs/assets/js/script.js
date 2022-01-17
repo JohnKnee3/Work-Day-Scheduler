@@ -9,7 +9,7 @@ var saveTasks = function () {
 //gets items from local storage
 var loadTasks = function () {
     tasks = JSON.parse(localStorage.getItem("tasks"));
-    console.log(tasks);
+    
 //local storage is empty this creates an empty array
     if (!tasks) {
         tasks = [];
@@ -49,20 +49,30 @@ $(".time-block").on("blur", ".description", function () {
 });
 
 //assigns colors to the times if the are in the past, present or future
+
 var auditTask = function() {
+    var test = $("textarea").each(function() {
+        //var hour = $(this).attr(id)
+        console.log(test);
+    });
     
-    var time = moment();
+    //line 60 will be replaced with line 55 and all will be placed in the for loop
+    var hour = "11"; 
+    var time = moment().hour(hour);
     console.log(time);
 
-    // if(moment().isBefore(time)) {
-    //     $(".description").addClass("past");
-    // }
-    // else if(moment().isSame(time)) {
-    //     $(".description").addClass("present");
-    // }
-    // else if(moment().isAfter(time)){
-    //     $(".description").addClass("future");
-    // }
+//     var time = moment();
+//     console.log(time);
+
+//     if(moment().isBefore(time)) {
+//         $(".description").addClass("past");
+//     }
+//     else if(moment().isSame(time)) {
+//         $(".description").addClass("present");
+//     }
+//     else if(moment().isAfter(time)){
+//         $(".description").addClass("future");
+//     }
 };
 
 //curent day display with moment
